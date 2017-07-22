@@ -2,6 +2,10 @@ def coinchanger(change)
   coin_values = {}
   if change.between?(1, 4)
     coin_values[:penny] = 1 * change
+  elsif
+    change.between?(5, 10)
+    coin_values[:nickel] = 5 * (change/5)
+    p coin_values
 #   if coin_values 25
 #   coin_values[:quarter] = 25
 #   p coin_values
@@ -16,7 +20,8 @@ def coinchanger(change)
 # else
 #   coin_values[:penny] = 1
 #    p coin_values
- end
+
+end
 
   coin_values.each do |value, key|
   coin_values.values
