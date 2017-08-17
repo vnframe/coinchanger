@@ -2,12 +2,12 @@ def coinchanger(change)
   your_change = {quarter: 0, dime: 0, nickel: 0, penny: 0}
   #will return coin values of change
   coin_values = {quarter: 25, dime: 10, nickel: 5, penny: 1}
-  coin_values.each { |key, value| while value <= change
-   coin_values.values
-   your_change[key] += 1
-  change = change - value
+  #sets values for coins
+  coin_values.each { |key, value| while value <= change #continues looping as long as statement is true
+   your_change[key] += 1 #.each adds the key (coin) with the largest value
+  change = change - value #subtracts value from change before looping again
 end}
-p your_change
+p your_change #prints change
 end
 
 #   if change.between?(1, 4)
